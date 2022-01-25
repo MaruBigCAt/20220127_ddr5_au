@@ -1,0 +1,48 @@
+.bg-dark {
+  background-color: #101621;
+}
+
+/* img {
+  width: 100%;
+  height: auto;
+} */
+
+.socialmedia_btn {
+  width: 4%;
+  margin: 0 4px;
+}
+.teamlogo {
+  width: 48%;
+  max-width: 250px;
+}
+
+@media (max-width: 1025px){
+  .teamlogo {
+    width: 29.296vw;
+    max-width: 300px;
+  }
+  .socialmedia_btn {
+    width: 5.46875vw;
+  }
+}
+
+@media (max-width:751px) {
+  .socialmedia_btn {
+    width: 10%;
+  }
+  .teamlogo {
+    width: 48%;
+    max-width: 250px;
+  }
+}
+
+
+@media (max-width:375px) {
+  .socialmedia_btn {
+    width: 13%;
+  }
+  .teamlogo {
+    width: 65%;
+    max-width: 250px;
+  }
+}
