@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Open+Sans:wght@400;600&family=Stardos+Stencil:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,500&display=swap');
 * {
   margin: 0px;
   padding: 0px;
@@ -17,11 +17,10 @@ a[type="button"] {
 }
 
 body {
-  font-family: 'Stardos Stencil', 'Merriweather','Open Sans','sans-serif';
-  font-family: 'Roboto', 'Open Sans', sans-serif;
-  color: #555;
-  background-image: url(../images/Bg.jpg);
-  background-repeat: repeat-y;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  /* background-image: url(../images/Bg.jpg); */
+  /* background-repeat: repeat-y; */
   overflow-x: hidden;
 }
 
@@ -40,29 +39,82 @@ body {
 .Kv_Box {
   width: 100%;
   height: 100vh;
-  /* min-height: 1000px; */
-  min-height: 900px;
   overflow: hidden;
+  background-image: url(../images/kv_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+} 
+
+.Kv_Box_Text {
+  margin-top: 10rem;
+  line-height: 160%;
+  position: relative;
 }
 
-.item1-1 {
-  animation: item1 2s infinite !important;
+.Kv_Box_Text h1 {
+  z-index: 1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  position: relative;
 }
 
-@keyframes item1 {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(0, -15px); }
-  100% { transform: translate(0, 0); }
-}
-
-.Item_Img_04 {
+.Kv_Box_Text h1:after {
+  content: '';
   position: absolute;
-  width: 920px;
-  height: 736px;
-  left: -150px;
-  top: 710px;
-  z-index: 3;
-  animation: item1 2s infinite;
+  right: 10px;
+  bottom: 10px;
+  width: 100%;
+  height: 20px;
+  background-color: #9929EA;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    right: -1000px;
+  }
+
+  to {
+    right: 10px;
+  }
+}
+
+.btn-solid-pur {
+  display: inline-block;
+  padding: 1.625rem 2.625rem 1.625rem 2.625rem;
+  background: linear-gradient(90deg, #9929EA 0%, #5808FB 100%);
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 0;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.btn-solid-pur:hover {
+  color: #fff;
+} 
+
+.Item_ImgBox {
+  left: 0;
+  top: -10rem;
+  position: absolute;
+}
+
+.Item_Img_02 {
+  left: 390px;
+  top: 580px;
+  transition: all 0.5s;
+}
+
+.Item_Img_02:hover {
+  /* left: 390px;
+  top: 600px; */
 }
 
 .Item_Text {
@@ -70,47 +122,19 @@ body {
   margin-top: 170px;
 }
 
-.Tag_Title {
-  font-family: Stardos Stencil;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 55px;
-  color: #F9AE5D;
-}
-
-.Main_Title {
-  /* width: 710px; */
-  width: 770px;
-  height: 220px;
-  font-family: Stardos Stencil;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 110px;
-  color: #F9AE5D;
-}
-
-.Sec_Title {
-  font-family: Open Sans;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 38px;
-  color: #FFFFFF;
-}
-
 .ContBox_01 {
-  width: 100%;
-  height: auto;
-  /* background-color: #FEEED6; */
-  padding-top: 200px;
+  background-image:url(../images/section_bg.jpg);
   position: relative;
-  z-index: 2;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .ContBox_Title_01 {
   font-family: "Merriweather","Open Sans","sans-serif";
   font-weight: bold;
-  color: #A7231A;
+  color: #FCBE36;
   margin-bottom: 28px;
+  padding-bottom: 5rem;
 }
 
 .ContBox_content_01 {
@@ -120,47 +144,21 @@ body {
 }
 
 .ContBox_02 {
-  width: 100%;
-  height: auto;
+  background-image:url(../images/section_bg_02.jpg);
+  background-color: #000;
   position: relative;
-  z-index: 1;
-  padding-top: 200px;
-}
-
-.ContBox_Title_02 {
-  font-family: "Merriweather","Open Sans","sans-serif";
-  font-weight: bold;
-  color: #FEEED6;
-  margin-bottom: 30px;
-}
-
-.Prodcut_Box {
-  position: relative;
-  padding-bottom: 100px;
-}
-
-.Prodcut_ItemBox {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.Prodcut_Item {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-color: transparent;
-  border: 0;
-  height: 360px;
-  padding: 40px;
 }
 
-.Prodcut_Item_02 {
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-color: transparent;
-  border: 0;
-  height: 360px;
-  padding: 10px;
+.ProductImgBox {
+  height: 26vw;
 }
+
+
+
+
 
 @media (max-width: 1441px) {
 
